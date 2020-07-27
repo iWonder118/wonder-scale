@@ -7,8 +7,13 @@ CORS(app)
 
 
 @app.route("/hello")
-def index():
+def hello():
     return jsonify({"message": "hello"})
+
+
+@app.route("/goodbye")
+def goodbye():
+    return jsonify({"message": "goodbye"})
 
 
 if __name__ == "__main__":
