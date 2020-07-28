@@ -54,7 +54,23 @@ services:
       netgroup:
         ipv4_address: 129.16.119.112
 
-    command: sh -c "yarn start"
+    command: sh -c "yarn build"
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - 8080:80
+    volumes:
+      - ./front/wonder-scale/build:/var/www
+      - ./web_server/nginx:/etc/nginx/conf.d/
+    
+    depends_on:
+      - front
+    
+    networks:
+      netgroup:
+        ipv4_address: 129.16.119.113
   
 networks:
   netgroup:
