@@ -29,8 +29,8 @@ spec:
       - args:
         - python
         - /usr/web_api/v1/server.py
-        image: web-api
-        imagePullPolicy: ""
+        image: "iwonder118/web-api:v1.0"
+        imagePullPolicy: "Always"
         name: web-api
         ports:
         - containerPort: 8000

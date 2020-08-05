@@ -30,8 +30,8 @@ spec:
         - sh
         - -c
         - yarn build
-        image: front
-        imagePullPolicy: ""
+        image: "iwonder118/front:v1.0"
+        imagePullPolicy: "Always"
         name: front
         ports:
         - containerPort: 3000
