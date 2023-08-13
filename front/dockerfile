@@ -1,4 +1,0 @@
-FROM node:latest
-
-RUN mkdir -p /usr/front
-WORKDIR /usr/front/wonder-scale
